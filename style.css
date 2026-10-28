@@ -1,0 +1,15 @@
+*{box-sizing:border-box} :root{--navy:#16324f;--blue:#2463a6;--paper:#f4f7fb;--text:#253449;--muted:#63748a;--border:#dbe3ed}
+body{margin:0;font:12pt/1.55 "Times New Roman",Times,serif;color:var(--text);background:var(--paper)}
+.container{width:min(1080px,calc(100% - 32px));margin:auto}header{padding:30px 0;background:linear-gradient(130deg,#16324f,#2463a6);color:white}
+.eyebrow{font-size:10pt;letter-spacing:1.5px}h1{font-size:30pt;margin:8px 0}header p:last-child{margin-bottom:0}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-top:24px;padding-bottom:28px}
+.panel{background:white;border:1px solid var(--border);border-radius:14px;padding:20px;box-shadow:0 4px 14px #16324f0d;min-width:0}
+h2{font-size:16pt;color:var(--navy);margin:0 0 12px}label{display:block;margin:10px 0 5px;font-weight:bold}
+input,select{width:100%;padding:10px 12px;border:1px solid #b9c7d8;border-radius:7px;font:inherit;background:white}
+button{border:0;border-radius:7px;padding:10px 14px;font:inherit;font-weight:bold;color:white;background:var(--blue);cursor:pointer}
+button.secondary{color:var(--navy);background:#e7edf5}.actions{display:flex;gap:10px;align-items:center;margin-top:12px}.actions input{flex:1;min-width:0}
+.muted{color:var(--muted)}.highlight{color:#173f75;background:#e6f1ff;border-left:4px solid #3478c8;padding:12px}.teks-besar{font-size:1.4rem}
+.status{min-height:1.5em;font-weight:bold}.error{color:#b42318}.success{color:#18794e}.summary{padding:12px;background:#f0f8f3;border:1px solid #b8dfc7;border-radius:8px}
+li{margin-bottom:8px}.task-item{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.task-item span{flex:1;min-width:120px}.task-item button{padding:5px 9px;font-size:10.5pt}.delete-button{background:#a83232}.selesai span{text-decoration:line-through;color:#687386}.hidden-text{display:none}.wide{grid-column:1/-1}
+footer{background:var(--navy);color:#e5edf7;padding:16px;text-align:center}
+@media(max-width:720px){.grid{grid-template-columns:1fr}.wide{grid-column:auto}.panel{padding:16px}.actions{align-items:stretch;flex-direction:column}.actions button{width:100%}h1{font-size:25pt}}

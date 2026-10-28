@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lab6Web - DOM dan Event Handling</title><link rel="stylesheet" href="style.css"><script src="script.js" defer></script></head>
+<body><header><div class="container"><p class="eyebrow">PRAKTIKUM 6 • PEMROGRAMAN WEB</p><h1 id="judul">Belajar JavaScript DOM</h1><p>Manipulasi elemen, event handling, validasi form, dan interaksi pengguna.</p></div></header>
+<main class="container grid">
+<section class="panel"><h2>1. Mengubah teks dengan DOM</h2><p id="pesan">Konten awal sebelum tombol ditekan.</p><button id="tombolAksi" type="button">Ubah pesan dan waktu</button></section>
+<section class="panel"><h2>2. Mengubah kelas dan gaya CSS</h2><p id="teksGaya">Tekan tombol untuk mengubah tampilan paragraf ini.</p><button id="tombolGaya" type="button">Aktifkan / nonaktifkan gaya</button></section>
+<section class="panel"><h2>3. Penghitung karakter</h2><label for="namaInput">Masukkan nama atau teks</label><input id="namaInput" maxlength="40" placeholder="Ketik di sini, maksimal 40 karakter"><p>Jumlah karakter: <strong id="jumlahKarakter">0</strong> / 40</p></section>
+<section class="panel"><h2>4. Form pendaftaran workshop</h2><p>Nama minimal 3 karakter, email valid, dan sesi wajib dipilih.</p>
+<form id="formPendaftaran" novalidate><label for="nama">Nama lengkap</label><input id="nama" name="nama" placeholder="Nama lengkap">
+<label for="email">Alamat email</label><input id="email" name="email" type="email" placeholder="nama@example.com">
+<label for="sesi">Pilihan sesi</label><select id="sesi" name="sesi"><option value="">-- Pilih sesi workshop --</option><option>Pagi (09.00–11.00)</option><option>Siang (13.00–15.00)</option><option>Sore (15.30–17.30)</option></select>
+<p id="sesiTerpilih" class="muted">Sesi yang dipilih: belum ada</p><div class="actions"><button type="submit">Daftar workshop</button><button type="reset" class="secondary">Reset form</button></div></form>
+<p id="pesanForm" class="status" aria-live="polite"></p><div id="ringkasan" class="summary" hidden></div></section>
+<section class="panel"><h2>5. Daftar tugas sederhana (To-do List)</h2><label for="inputTugas">Tugas baru</label><div class="actions"><input id="inputTugas" placeholder="Contoh: Mengerjakan laporan"><button id="tambahTugas" type="button">Tambah</button></div><p id="pesanTugas" class="status" aria-live="polite"></p><ul id="daftarTugas"></ul></section>
+<section class="panel"><h2>6. Eksperimen: tampilkan/sembunyikan teks</h2><p id="teksToggle">Paragraf ini dapat disembunyikan atau ditampilkan kembali dengan class CSS.</p><button id="tombolToggle" type="button">Sembunyikan paragraf</button></section>
+<section class="panel wide"><h2>Ringkasan fungsi</h2><ul><li>Memperbarui teks dan waktu dengan event click.</li><li>Mengubah class CSS dengan classList.toggle().</li><li>Menghitung karakter lewat event input.</li><li>Validasi nama, email, dan sesi workshop.</li><li>To-do List: tambah, tandai selesai, hapus.</li><li>Dropdown sesi memakai event change.</li></ul></section></main>
+<footer>Lab6Web • JavaScript DOM dan Event Handling</footer></body></html>
